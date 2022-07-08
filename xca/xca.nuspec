@@ -8,14 +8,14 @@
     <owners>galeksandrp</owners>
     <title>XCA (Install)</title>
     <authors>Christian Hohnstädt</authors>
-    <projectUrl>https://xca.sourceforge.io</projectUrl>
-    <iconUrl>https://a.fsdn.com/con/app/proj/xca/screenshots/329259.jpg</iconUrl>
-    <copyright>Copyright (c) 2002-2018 Christian Hohnstädt</copyright>
-    <licenseUrl>https://opensource.org/licenses/BSD-3-Clause</licenseUrl>
+    <projectUrl>https://www.hohnstaedt.de/xca/</projectUrl>
+    <iconUrl>https://www.hohnstaedt.de/xca/templates/g5_hydrogen/custom/images/bigcert.png</iconUrl>
+    <copyright>Copyright (C) 2001 - 2021 Christian Hohnstaedt</copyright>
+    <licenseUrl>https://github.com/chris2511/xca/blob/main/COPYRIGHT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/xca/code/</projectSourceUrl>
-    <docsUrl>http://xca.sourceforge.net</docsUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/xca/bugs/</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/chris2511/xca</projectSourceUrl>
+    <docsUrl>https://www.hohnstaedt.de/xca/index.php/documentation/manual</docsUrl>
+    <bugTrackerUrl>https://github.com/chris2511/xca/issues</bugTrackerUrl>
     <tags>xca ca pki crypto cryptography openssl admin</tags>
     <summary>X Certificate and Key management is an interface for managing asymetric keys like RSA or DSA. It is intended as a small CA for creation and signing certificates</summary>
     <description>X Certificate and Key management is an interface for managing asymetric keys like RSA or DSA. It is intended as a small CA for creation and signing certificates. It uses the OpenSSL library for the cryptographic operations.
@@ -30,7 +30,7 @@ Create Subject- and/or Extension- templates to ease issuing similar certs
 Convert existing certificates or requests to templates
 Get the broad support of x509v3 extensions as flexible as OpenSSL but user friendlier
 Adapt the Columns to have your important information at a glance</description>
-    <releaseNotes>https://sourceforge.net/projects/xca/files/xca/1.4.0/</releaseNotes>
+    <releaseNotes>https://github.com/chris2511/xca/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
