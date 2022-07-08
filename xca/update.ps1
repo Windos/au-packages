@@ -5,6 +5,8 @@ function global:au_SearchReplace {
         ".\tools\chocolateyInstall.ps1" = @{
             "(?i)(^\s*url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
             "(?i)(^\s*checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+			"(?i)(^\s*FileType\s*=\s*)('.*')"   = "`$1'$(if ($Latest.URL32 -match '\.msi$') { 'msi' } else { 'exe' })'"
+			"(?i)(^\s*SilentArgs\s*=\s*)('.*')"   = "`$1'$(if ($Latest.URL32 -match '\.msi$') { '/qn /norestart' } else { '/S' })'"
         }
     }
 }
@@ -27,7 +29,7 @@ function global:au_GetLatest {
 		$version = $version.major, $version.minor -join '.'
 		if (!$versions[$version]) {
 		
-		$url = ($_.assets | where {$_.name.EndsWith(".exe")}).browser_download_url
+		$url = ($_.assets | where {$_.name -match '\.(msi|exe)$'}).browser_download_url
 
 		if ($url) { $versions[$version] = @{ # append to external $versions variable since powershell does not reduce well, because in powershell it is possible for hashtable to have items with same names
 			# foreach create hashtables like
