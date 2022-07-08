@@ -1,9 +1,9 @@
 ﻿$packageArgs = @{
   packageName            = "$env:chocolateyPackageName"
-  FileType               = 'exe'
-  SilentArgs             = '/S'
-  url                    = 'https://github.com/chris2511/xca/releases/download/RELEASE.2.1.2/setup_xca-2.1.2.exe'
-  checksum               = '8dbdabde2df929019a8f3ce7bd7e1b5de180076edb4ccd5c76625d90fb97e3c0'
+  FileType               = 'msi'
+  SilentArgs             = '/qn /norestart'
+  url                    = 'https://github.com/chris2511/xca/releases/download/RELEASE.2.4.0/xca-2.4.0.msi'
+  checksum               = '3479fe69feed931ce4e8a9945c6cc30b0f1a947980a2288fdbdd7faf1d78ec59'
   checksumType           = 'sha256'
 }
 Install-ChocolateyPackage @packageArgs
